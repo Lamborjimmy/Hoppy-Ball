@@ -6,10 +6,17 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     private int sceneToContinue;
-    
+    private int hasPlayed;
+
+
 
     //Menu functions
-    
+
+    private void Start()
+    {
+        hasPlayed = PlayerPrefs.GetInt("hasPlayed", 0);
+        sceneToContinue = PlayerPrefs.GetInt("savedScene");
+    }
     public void Quit()
     {
         Application.Quit();
@@ -17,13 +24,18 @@ public class Menu : MonoBehaviour
     
     public void StartGame() 
     {
-        if (GameObject.Find("Player").GetComponent<PlayerCollide>().currentSceneIndex == 0)
+        if (hasPlayed == 0)
         { 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.SetInt("hasPlayed", 1);
+
+        }
+        else {
+            
+            SceneManager.LoadScene(sceneToContinue);
         }
 
-        sceneToContinue = PlayerPrefs.GetInt("savedScene");
-        SceneManager.LoadScene(sceneToContinue);
+        
      
     }
     

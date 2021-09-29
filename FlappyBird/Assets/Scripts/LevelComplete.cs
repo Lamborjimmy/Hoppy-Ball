@@ -16,6 +16,8 @@ public class LevelComplete : MonoBehaviour
         {
             instance = this;
         }
+        TinySauce.OnGameStarted(levelNumber: "savedScene");
+        
     }
     
     //This line of code is for loading next levels and I wanted to restart the game while the player reaches 500lvl and finish it 

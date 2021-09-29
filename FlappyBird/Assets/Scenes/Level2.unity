@@ -19535,7 +19535,6 @@ GameObject:
   - component: {fileID: 1346735696}
   - component: {fileID: 1346735695}
   - component: {fileID: 1346735694}
-  - component: {fileID: 1346735693}
   - component: {fileID: 1346735691}
   - component: {fileID: 1346735692}
   - component: {fileID: 1346735697}
@@ -19600,20 +19599,6 @@ MonoBehaviour:
   player: {fileID: 792174249}
   finishLine: {fileID: 465206762}
   slider: {fileID: 48202412}
---- !u!114 &1346735693
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346735689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 65ee0635f360a164291a57aa46c9f407, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioMixerMusic: {fileID: 24100000, guid: 2374a77e83da83148a15cf49241f393c, type: 2}
-  audioMixerSfx: {fileID: 24100000, guid: 478354669e2f600438cdca64fb1c92d7, type: 2}
 --- !u!114 &1346735694
 MonoBehaviour:
   m_ObjectHideFlags: 0

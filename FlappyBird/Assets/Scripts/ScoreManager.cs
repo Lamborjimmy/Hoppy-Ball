@@ -25,7 +25,8 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = "Score:" + score.ToString();
         highscoreText.text = "HIGHSCORE:" + highscore.ToString();
         scoreDeathText.text = "Score: " + score.ToString();
-        highscoreDeathText.text = "HIGHSCORE: " + highscore.ToString(); 
+        highscoreDeathText.text = "HIGHSCORE: " + highscore.ToString();
+        TinySauce.OnGameFinished(true, score);
     }
     public void AddScore()
     {
